@@ -1,6 +1,6 @@
-package com.practice.first.bookstore.repository;
+package com.practice.first.bookstore.user.repository;
 
-import com.practice.first.bookstore.entity.UserRegistration;
+import com.practice.first.bookstore.user.entity.UserRegistration;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -11,5 +11,5 @@ public interface IUserRepository extends JpaRepository<UserRegistration, Long> {
     @Query("select a from UserRegistration a where a.emailId = :email")
     UserRegistration findByEmailId(@Param("email") String emailId);
     @Query("select a from UserRegistration a where a.emailId = :email and a.password = :password")
-    UserRegistration findByEmailIdAndPassword(@Param("email") String emailId, @Param("password") String password);
+    UserRegistration findByEmailIdAndPassword(@Param("email") String emailId,@Param("password") String password);
 }

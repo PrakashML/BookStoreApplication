@@ -1,4 +1,4 @@
-package com.practice.first.bookstore.util;
+package com.practice.first.bookstore.user.util;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

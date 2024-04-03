@@ -1,10 +1,14 @@
-package com.practice.first.bookstore.dto;
+package com.practice.first.bookstore.user.dto;
 
-import lombok.Data;
-import lombok.NonNull;
+import lombok.*;
 
 import java.time.LocalDate;
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@ToString
+@Setter
 public class UserDTO {
     private String firstName;
     private String lastName;

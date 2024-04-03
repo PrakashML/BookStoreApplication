@@ -1,4 +1,4 @@
-package com.practice.first.bookstore.entity;
+package com.practice.first.bookstore.user.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -38,8 +38,10 @@ public class UserRegistration {
     private String emailId;
 
     @Column(name = "verify")
-    private Boolean verify;
+    private Boolean verify=false;
 
+    @Column(name = "otp")
+    private int otp;
     public UserRegistration(String firstName, String lastName, LocalDate dob, String password, String emailId) {
         this.firstName = firstName;
         this.lastName = lastName;

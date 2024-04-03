@@ -1,4 +1,4 @@
-package com.practice.first.bookstore.util;
+package com.practice.first.bookstore.user.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -22,4 +22,13 @@ public class EmailSender {
         mailSender.send(message);
         System.out.println("Mail sent to the user successfully");
     }
+
+    public void sendOTP(String to, int otp){
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo(to);
+        message.setSubject("OTP for Password Reset");
+        message.setText("Your OTP for password reset is: " + otp);
+        mailSender.send(message);
+    }
+
 }
